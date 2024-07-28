@@ -91,7 +91,7 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    @Transactional(rollbackFor = {ObjectOptimisticLockingFailureException.class, Exception.class})
+    @Transactional
     public ProjectMembersDto updateProject(ProjectMembersDto dto) {
         try {
             ProjectDto projectDto = dto.getProjectDto();
